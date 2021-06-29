@@ -1,6 +1,6 @@
 package _01_login.dto;
 
-public class MemberDTO {
+public class MemberDTO { // 데이터 전송 객체 
 
     private String id;
     private String pw;

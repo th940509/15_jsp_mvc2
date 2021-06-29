@@ -54,15 +54,15 @@
 		<h1>회원 가입</h1>
 		<p>메가 아카데미를 찾아주셔서 감사합니다.</p>
 		<hr>
-		<form action="joinAction.do" method="post" onsubmit="return formValidationCheck()">
-			<h4>로그인 정보</h4>
+		<form action="joinAction.do" method="post" onsubmit="return formValidationCheck()"> 
+			<h4>로그인 정보</h4>                       <!-- onsubmit : form실행 시 실행되는 함수 -->
 			<label for="id">아이디 </label><input type="text" id="id" name="id" autofocus>
 			<br><br>
 			<label for="pw">패스워드 </label><input type="password" id="pw" name="pw">
 			<br>
 			<h4>개인 정보</h4>
 			<label for="name">이름 </label><input type="text" id="name" name="name" placeholder="공백없이 입력하세요">
-			<br><br>
+			<br><br>                                                              <!-- palceholder : label의 배결 글 씨 커서 올리면 사라짐. -->
 			<label for="contact">연락처 </label><input type="text" id="tel" name="tel" size="20" placeholder="000-0000-0000"> 
 			<br><br>
 			<label for="email">이메일 </label><input type="email" id="email" name="email">

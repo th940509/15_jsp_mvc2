@@ -65,17 +65,18 @@
 			<a href="delete.do">탈퇴</a><br><br>
 		</c:if>
 		
-		<c:if test="${ null eq id }">
-			<a href="join.do">회원가입</a><br><br>
-			<a href="login.do">로그인</a>
+		<c:if test="${ null eq id }"> <!-- id = null일 경우 (jstl-if문) -->
+			<a href="join.do">회원가입</a><br><br> <!-- 회원가입 링크 join.do (servlet) -->
+			<a href="login.do">로그인</a> <!-- 로그인 링크 login.do (servlet) -->
 		</c:if>
 	</div>	
 		
 	<hr>
 	<br><br><br>
 	
-	<div align="center">
+	<div align="center"> <!-- 글자 가운데로 -->
 		<a href="apply.do"><img alt="입사지원하기" src="img/applyonline.png"></a>
+		<!-- 입사 지원 링크 apply.do (servlet) -->
 	</div> 
 </body>
 </html>

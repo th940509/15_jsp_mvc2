@@ -13,7 +13,7 @@ import _01_login.dto.MemberDTO;
  
 public class MemberDAO {
  
-    private MemberDAO() {}
+    private MemberDAO() {} // 싱글턴 패턴
     private static MemberDAO instance = new MemberDAO();
     public static MemberDAO getInstance() {
         return instance;

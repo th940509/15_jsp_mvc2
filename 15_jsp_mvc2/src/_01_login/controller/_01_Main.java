@@ -25,12 +25,11 @@ public class _01_Main extends HttpServlet {
 	
 	public void reqPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(); // 세션 값 가져오기
 		String id = (String)session.getAttribute("memId");
 		request.setAttribute("id", id);
 		
 		RequestDispatcher dis = request.getRequestDispatcher("_01_login/01_main.jsp");
-		dis.forward(request, response);
 		
 	}
 
