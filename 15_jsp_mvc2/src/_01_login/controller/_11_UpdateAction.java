@@ -39,7 +39,7 @@ public class _11_UpdateAction extends HttpServlet {
         String field  = request.getParameter("field");
         String[] temp = request.getParameterValues("skill");
         String major  = request.getParameter("major");
-        String skill  = "";
+        String skill  = ""; // 한 줄로 만들기
         for (int i=0; i<temp.length; i++) {
         	skill += temp[i];
         	if (i != temp.length - 1) {

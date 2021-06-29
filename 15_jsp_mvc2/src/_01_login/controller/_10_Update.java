@@ -35,7 +35,7 @@ public class _10_Update extends HttpServlet {
 		
 		if (mdto.getField() != null) {  // 지원분야가 없으면 > 최초지원
 		
-			String[] skills = mdto.getSkill().split(",");
+			String[] skills = mdto.getSkill().split(","); // ,기준으로 자르기
 		
 			for (String skill : skills) {
 				if (skill.equals("html")) 		request.setAttribute("html", true);

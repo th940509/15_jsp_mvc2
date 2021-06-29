@@ -23,11 +23,12 @@ public class MemberDAO {
     PreparedStatement pstmt = null;
     ResultSet rs 			= null;
     
-    public Connection getConnection() throws Exception {
-        
+    public Connection getConnection() throws Exception { // Context, InitialContext, DataSource *import 필요
+                                      // try-catch구문과 유사
         Context initCtx = new InitialContext();
         // lookup 메서드를 통해
         // server.xml 파일에 접근하여 자바환경 코드를 검색
+        //  (context.xml)
         Context envCtx = (Context)initCtx.lookup("java:comp/env");
         // <Context>태그안의 <Resource> 환경설정의
         // name이 jdbc/pool인 것을 검색

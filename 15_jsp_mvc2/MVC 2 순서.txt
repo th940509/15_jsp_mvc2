@@ -1,0 +1,55 @@
+<MVC2 예시>
+
+1. MemberDTO(데이터 전송 객체)
+2. MemberDAO - 연결 정보 입력
+3. <jsp> 01_main - 회원가입 메뉴 만들기
+4. <servlet>_02_join
+5. <jsp> join
+6. <servlet>_03_ joinAction
+7. MemberDAO - 회원가입DAO
+   *중복 아이디 체크 메서드
+8. <jsp> 05_joinAction
+9. <servlet> _01_main
+   *현재 세션값 가져오기(getAttribute) 불가
+10. <jsp> main - 로그인 메뉴 만들기
+11. <servlet> _04_login
+12. <jsp> 04_login
+13. <servlet> _05_loginAction
+14. MemberDAO - 로그인DAO
+    *가입된 ID.PW 확인 메서드
+15. <servlet> _05_loginAction
+    *세션 값 만들기
+16. <jsp> 05_loginAction 
+17. <servlet> _01_main
+     *세션값 가져오기 가능 
+18. <jsp> 01_main - 입사지원하기 메뉴 만들기
+     *jstl if문 생성 가능
+19. <servlet> _07_apply
+     *MemberDTo mbto 값 가져오기
+20. <jsp> 07_apply
+21. <servlet> _08_applyAction
+22. MemberDAO - 입사지원DAO
+    *정보 업데이트 메서드
+23. <jsp> 08_applyAction
+24. <jsp> main - 입사지원정보 수정 메뉴 만들기
+25. <servlet> update
+26.  MemberDAO - 한명의 회원의 정보 조회DAO
+27. <jsp> 10_update
+28. <servlet> _11_updateAction
+29.  MemberDAO - 회원정보 수정DAO
+30. <jsp> 11_updateAction
+31. <jsp> main - 로그아웃 메뉴 만들기
+32. <servlet> _06_logout
+33. <jsp> 06_logout
+34. <jsp> main - 탈퇴 메뉴 만들기
+35. <servlet> 09_delete
+36. MemberDAO - 회원탈퇴DAO
+37. <jsp> 09_delete
+
+
+
+
+
+
+
+

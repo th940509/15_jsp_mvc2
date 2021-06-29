@@ -19,7 +19,7 @@
 		<hr>
 		<form action="applyAction.do" method="post">
 			<h4>개인 정보</h4>
-			<label>이름</label> <input type="text" name="name" value="${ mdto.name }" > 
+			<label>이름</label> <input type="text" name="name" value="${ mdto.name }" > <!-- 이름, 연락처, 이메일 값은 가져오기 -->
 			<br>
 			<label>연락처</label> <input type="text" name="tel" value="${ mdto.tel }"> 
 			<br> 

@@ -32,7 +32,7 @@ public class _09_Delete extends HttpServlet {
 		
 		MemberDAO.getInstance().deleteMember(id);
 		
-		session.invalidate();
+		session.invalidate(); // 세션끊기
 		
 		RequestDispatcher dis = request.getRequestDispatcher("_01_login/09_delete.jsp");
 		dis.forward(request, response);

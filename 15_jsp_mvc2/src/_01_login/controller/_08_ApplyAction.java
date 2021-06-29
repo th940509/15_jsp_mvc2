@@ -35,8 +35,8 @@ public class _08_ApplyAction extends HttpServlet {
 		String field = request.getParameter("field");
 		String major = request.getParameter("major");
 
-		String[] temp = request.getParameterValues("skill");
-		String skill = "";
+		String[] temp = request.getParameterValues("skill"); // 체크박스 복수 선택 가능 -> 배열로 받기
+		String skill = ""; // 1줄로 만들기
 		for (int i=0; i<temp.length; i++) {
 			skill += temp[i];
 			if (i != temp.length - 1) {

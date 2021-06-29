@@ -26,7 +26,7 @@ public class _06_Logout extends HttpServlet {
 	public void reqPro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		session.invalidate();
+		session.invalidate(); // 세션 끊기
 		
 		RequestDispatcher dis = request.getRequestDispatcher("_01_login/06_logout.jsp");
 		dis.forward(request, response);

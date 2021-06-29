@@ -33,7 +33,7 @@
 					<label>
 						<input type="radio" name="field" value="publishing" 
 							<c:if test="${ mdto.field eq 'publishing'}"> checked </c:if>>웹 퍼블리싱
-					</label>
+					</label> 
 					<label>
 						<input type="radio" name="field" value="frontend" 
 							<c:if test="${ mdto.field eq 'frontend'}"> checked </c:if>>프론트앤드
