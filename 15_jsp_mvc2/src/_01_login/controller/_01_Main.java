@@ -30,7 +30,7 @@ public class _01_Main extends HttpServlet {
 		request.setAttribute("id", id);
 		
 		RequestDispatcher dis = request.getRequestDispatcher("_01_login/01_main.jsp");
-		
+		dis.forward(request, response);
 	}
 
 }

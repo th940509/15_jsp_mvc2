@@ -23,7 +23,7 @@
 17. <servlet> _01_main
      *세션값 가져오기 가능 
 18. <jsp> 01_main - 입사지원하기 메뉴 만들기
-     *jstl if문 생성 가능
+     *jstl if문 생성 가능(세션에 인한 메뉴 추가)
 19. <servlet> _07_apply
      *MemberDTo mbto 값 가져오기
 20. <jsp> 07_apply
