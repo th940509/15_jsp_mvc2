@@ -37,7 +37,7 @@ public class _10_Update extends HttpServlet {
 		
 			String[] skills = mdto.getSkill().split(","); // ,기준으로 자르기
 		
-			for (String skill : skills) {
+			for (String skill : skills) { // 향상된 for문 : for(자료형 변수명: 배열명) {}
 				if (skill.equals("html")) 		request.setAttribute("html", true);
 				if (skill.equals("css")) 		request.setAttribute("css", true);
 				if (skill.equals("javascript")) request.setAttribute("javascript", true);
