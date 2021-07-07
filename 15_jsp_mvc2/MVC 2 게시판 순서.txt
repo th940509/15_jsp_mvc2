@@ -1,0 +1,28 @@
+MVC2 게시판 순서
+1) DTO, DAO연결 정보 생성
+2) 01_main.jsp 
+3) _04_bList.java  (servlet)
+4) getAllBoard(전체 게시글 조회하는 DAO)
+5) bList.jsp *제목 누를 시 이동 하는 기능 제외
+6) _02_bWrite.java
+7) 02_bWirte.jsp
+8) _03_bWriteAction.java (servlet)
+9) insertBoard(게시글을 추가하는 DAO)
+10) 03_bWritePro.jsp (확인 메세지 출력)
+11) 제목 클릭 시 한게의 게시물 조회하는 기능
+     _05_bInfo.java(servlet)
+12) getOneBoard(한개의 게시글을 조회하는 DAO)
+13) 05_bInfo,jsp
+14) 05_binfo.jsp에서 수정하기 메뉴 생성 시
+     _06_bUpdate.java
+15) getOneUpdateBoard(업데이트할 데이터를 조회하는 DAO)
+16) 06_bUpdate.jsp
+17) _07_bUpdateAction.java(servlet)
+18) updateBoard(게시글을 수정하는DAO)
+19) validMemberCheck(비밀번호가 일치하는지 검증하는 DAO)
+20) 05_binfo.jsp에서 삭제하기 메뉴 생성 시
+      _08_bDelete.java (Servlet)
+21) 08_bDelete.jsp
+22) _09_bDeleteAction.java (servlet)
+23) deleteBoard(게시글 삭제하는 DAO)
+23) 09_bDeletePro.jsp

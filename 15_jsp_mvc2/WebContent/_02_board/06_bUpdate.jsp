@@ -31,11 +31,11 @@
 				</tr>
 				<tr>
 					<td>글내용</td>
-					<td><textarea rows="10" cols="60" name="content">${mdto.content}"</textarea></td> <!-- input type="text" 태그와 다르게 textarea태그는 값을 바깥쪽에 넣어야 내용에 들어감. -->
-				</tr>
+					<td><textarea rows="10" cols="60" name="content">${mdto.content}"</textarea></td> 
+				</tr>                 <!-- input type="text" 태그와 다르게 textarea태그는 값을 바깥쪽에 넣어야 내용에 들어감. -->
 				<tr align="center">
 					<td colspan="4">
-						<input type="hidden" name="num" value="${mdto.num }" /> 
+						<input type="hidden" name="num" value="${mdto.num }" /> <!-- hidden태그로 mdto.num 값 숨겨서 가지고 감. -->
 						<input type="submit" value="글수정" />
 						<input type="button" onclick="location.href='bList.do'" value="전체글보기" />
 					</td>

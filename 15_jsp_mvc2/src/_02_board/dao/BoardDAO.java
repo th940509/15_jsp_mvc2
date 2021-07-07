@@ -159,12 +159,12 @@ public class BoardDAO { // 싱글턴 패턴 생성
 		try {
 			
 			conn = getConnection();
-			pstmt = conn.prepareStatement( "SELECT * FROM BOARD WHERE NUM=? AND PASSWORD=?");
+			pstmt = conn.prepareStatement( "SELECT * FROM BOARD WHERE NUM=? AND PASSWORD=?"); //  패스워드와 num 두개가 모두 일치할 경우의 board값을 조회
 			pstmt.setInt(1, boardDTO.getNum());
 			pstmt.setString(2, boardDTO.getPassword());
 			rs = pstmt.executeQuery();
 
-			if (rs.next()) 	isValidMember = true;
+			if (rs.next()) 	isValidMember = true; // rs.next()가 존재하면 isValidMember를 true;
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -210,9 +210,9 @@ public class BoardDAO { // 싱글턴 패턴 생성
 		
 		try {
 			
-			if (validMemberCheck(boardDTO)) {
+			if (validMemberCheck(boardDTO)) { // 비밀번호가 일치하는지 검증하는 DAO가 true일 경우
 				conn = getConnection();
-				pstmt = conn.prepareStatement("UPDATE board SET SUBJECT=?, CONTENT=? WHERE NUM=?");
+				pstmt = conn.prepareStatement("UPDATE BOARD SET SUBJECT=?, CONTENT=? WHERE NUM=?");
 				pstmt.setString(1, boardDTO.getSubject());
 				pstmt.setString(2, boardDTO.getContent());
 				pstmt.setInt(3, boardDTO.getNum());

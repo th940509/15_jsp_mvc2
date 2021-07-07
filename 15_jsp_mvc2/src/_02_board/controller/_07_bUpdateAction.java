@@ -32,7 +32,7 @@ public class _07_bUpdateAction extends HttpServlet {
 		
 		BoardDTO bdto = new BoardDTO();
 		
-		bdto.setNum(Integer.parseInt(request.getParameter("num")));
+		bdto.setNum(Integer.parseInt(request.getParameter("num"))); // getter로 가져온 값을 setter로 값 넣기
 		bdto.setWriter(request.getParameter("writer"));
 		bdto.setSubject(request.getParameter("subject"));
 		bdto.setEmail(request.getParameter("email"));
