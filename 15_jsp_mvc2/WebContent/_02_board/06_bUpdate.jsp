@@ -31,7 +31,7 @@
 				</tr>
 				<tr>
 					<td>글내용</td>
-					<td><textarea rows="10" cols="60" name="content">${mdto.content}"</textarea></td>
+					<td><textarea rows="10" cols="60" name="content">${mdto.content}"</textarea></td> <!-- input type="text" 태그와 다르게 textarea태그는 값을 바깥쪽에 넣어야 내용에 들어감. -->
 				</tr>
 				<tr align="center">
 					<td colspan="4">

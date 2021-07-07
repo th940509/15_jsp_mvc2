@@ -12,9 +12,9 @@ import javax.sql.DataSource;
 
 import _02_board.dto.BoardDTO;
 
-public class BoardDAO {
+public class BoardDAO { // 싱글턴 패턴 생성
 
-	private BoardDAO() {}
+	private BoardDAO() {} 
 	private static BoardDAO instance = new BoardDAO();
 	public static BoardDAO getInstance() {
 		return instance;
@@ -48,7 +48,7 @@ public class BoardDAO {
 			pstmt = conn.prepareStatement("SELECT * FROM BOARD");
 			rs    = pstmt.executeQuery();
 			
-			while (rs.next()) {
+			while (rs.next()) { // rs.next가 있을 경우 model 클래스 변수에 대입
 
 				model = new BoardDTO();
 				model.setNum(rs.getInt(1));
@@ -85,15 +85,15 @@ public class BoardDAO {
 			conn = getConnection();
 
 			pstmt = conn.prepareStatement("UPDATE BOARD SET READ_COUNT=READ_COUNT+1 WHERE NUM=?");
-			pstmt.setInt(1, num);
+			pstmt.setInt(1, num);              // getOneBoard메서드 실행될때 마다 동일한NUM의 게시물 조회수(READ_COUNT)+1
 			pstmt.executeUpdate();
 
-			pstmt = conn.prepareStatement("SELECT * FROM BOARD WHERE NUM=?");
+			pstmt = conn.prepareStatement("SELECT * FROM BOARD WHERE NUM=?"); // NUM이 일치하는 데이터 조회
 			pstmt.setInt(1, num);
 			rs = pstmt.executeQuery();
 			
 			if (rs.next()) {
-				model.setNum(rs.getInt(1));
+				model.setNum(rs.getInt(1)); // 위의 클래스 변수에 getter한 값을 setter
 				model.setWriter(rs.getString(2));
 				model.setEmail(rs.getString(3));
 				model.setSubject(rs.getString(4));
@@ -179,7 +179,7 @@ public class BoardDAO {
 	}
 	
 	// 게시글을 추가하는 DAO
-	public void insertBoard(BoardDTO boardDTO) {
+	public void insertBoard(BoardDTO boardDTO) { // dbto가져오기
 
 		try {
 			
@@ -187,7 +187,7 @@ public class BoardDAO {
 				String sql = "INSERT INTO BOARD(WRITER,EMAIL,SUBJECT,PASSWORD,REG_DATE,READ_COUNT,CONTENT)";
 					   sql += "VALUES(?, ?, ?, ?, now(), 0, ?)";
 				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, boardDTO.getWriter());
+				pstmt.setString(1, boardDTO.getWriter()); //bdto에서 가져온 값 세팅
 				pstmt.setString(2, boardDTO.getEmail());
 				pstmt.setString(3, boardDTO.getSubject());
 				pstmt.setString(4, boardDTO.getPassword());

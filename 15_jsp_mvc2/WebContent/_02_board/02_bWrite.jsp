@@ -74,7 +74,7 @@
 					<td><textarea  rows="10" cols="50" id="content" name="content" ></textarea></td>
 				</tr>
 				<tr align="center">
-					<td colspan="2">
+					<td colspan="2"> <!-- 열병합 -->
 						<input type="submit" value="글쓰기" />
 						<input type="reset"  value="다시작성" />
 						<input type="button" onclick="location.href='bList.do'" value="전체게시글보기">

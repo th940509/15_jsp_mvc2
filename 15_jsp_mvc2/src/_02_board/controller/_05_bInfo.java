@@ -31,7 +31,7 @@ public class _05_bInfo extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		BoardDTO bdto =  BoardDAO.getInstance().getOneBoard(Integer.parseInt(request.getParameter("num")));
-		request.setAttribute("bdto", bdto);
+		request.setAttribute("bdto", bdto);                      // bList.jsp에서 num을 getParameter에서 가지고온 후 숫자로 변환
 		
 		RequestDispatcher dis = request.getRequestDispatcher("_02_board/05_bInfo.jsp");
 		dis.forward(request, response);

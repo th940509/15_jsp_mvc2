@@ -27,9 +27,9 @@
 --%>
 
 <body>
-	<div align="center" style="padding-top: 100px">
+	<div align="center" style="padding-top: 100px"> <!-- padding-top 속성: 요소 위쪽의 안쪽 여백 설정 속성 -->
 		<img src="img/jsp.PNG" alt="jsp심볼" width="800px" height="500px"><br><br><br><br>
-		<input type="button" value="게시판 보기" onclick="location.href='bList.do'">
+		<input type="button" value="게시판 보기" onclick="location.href='bList.do'"> <!-- 버튼 클릭 시  bList.do servlet으로 이동 -->
 	</div>
 </body>
 </html>

@@ -45,8 +45,8 @@
 				<td>${bdto.content}</td>
 			</tr>
 			<tr>
-				<td colspan="2">
-					<input type="button" value="수정하기" onclick="location.href='bUpdate.do?num=${bdto.num}'">
+				<td colspan="2"> <!-- 열병합 -->
+					<input type="button" value="수정하기" onclick="location.href='bUpdate.do?num=${bdto.num}'"> <!-- num=${bdto.num}인 것(조건) -->
 					<input type="button" value="삭제하기" onclick="location.href='bDelete.do?num=${bdto.num}'">
 					<input type="button" value="목록보기" onclick="location.href='bList.do'">
 				</td>

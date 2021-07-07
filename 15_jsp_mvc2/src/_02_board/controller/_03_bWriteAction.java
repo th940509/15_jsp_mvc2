@@ -31,13 +31,13 @@ public class _03_bWriteAction extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		BoardDTO bdto = new BoardDTO();
-		bdto.setWriter(request.getParameter("writer"));
+		bdto.setWriter(request.getParameter("writer")); // setter로 값 넣기
 		bdto.setSubject(request.getParameter("subject"));
 		bdto.setEmail(request.getParameter("email"));
 		bdto.setPassword(request.getParameter("password"));
 		bdto.setContent(request.getParameter("content"));
 		
-		BoardDAO.getInstance().insertBoard(bdto);
+		BoardDAO.getInstance().insertBoard(bdto); // 게시글 추가 DAO 실행
 		
 		RequestDispatcher dis = request.getRequestDispatcher("_02_board/03_bWritePro.jsp");
 		dis.forward(request, response);
