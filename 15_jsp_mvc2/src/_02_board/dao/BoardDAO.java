@@ -257,5 +257,4 @@ public class BoardDAO { // 싱글턴 패턴 생성
 		
 	}
 	
-	
 }

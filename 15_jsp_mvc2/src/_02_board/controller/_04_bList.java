@@ -37,5 +37,4 @@ public class _04_bList extends HttpServlet {
 		
 	}
 
-
 }
